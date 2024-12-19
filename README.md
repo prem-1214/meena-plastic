@@ -30,6 +30,3 @@ This will watch for any changes in your `input.css` file and generate the corres
 ## Contributing
 
 Feel free to submit issues or pull requests for improvements.
-```
-
-You can now copy and paste this into your `README.md` file.
