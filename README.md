@@ -1,6 +1,3 @@
-Here is the full code for your `README.md` file that you can directly paste into your `README.md`:
-
-```markdown
 # Meena Plastic Website
 
 Welcome to the "Meena Plastic" website project! This website showcases products and services offered by Meena Plastic. 
@@ -25,7 +22,7 @@ This will watch for any changes in your `input.css` file and generate the corres
 
 - `input.css`: The main input file where Tailwind CSS directives are defined.
 - `style.css`: The compiled CSS output.
-- `index.html`: The homepage for the Meena Plastic website.
+- `main.html`: The homepage for the Meena Plastic website.
 
 ## Contributing
 
