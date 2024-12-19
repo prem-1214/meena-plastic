@@ -1,0 +1,270 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Home - Meena Plastic</title>  
+    <link rel="stylesheet" href="style.css">  
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">   
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Toggle mobile menu visibility
+            const menuIcon = document.getElementById('menu-icon');
+            const mobileMenu = document.getElementById('mobile-menu');
+    
+            if (menuIcon && mobileMenu) {
+                menuIcon.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+    
+            // Side button scroll functionality
+            const scrollContainer = document.getElementById('scrollContainer');
+            const leftButton = document.getElementById('leftButton');
+            const rightButton = document.getElementById('rightButton');
+    
+            if (scrollContainer && leftButton && rightButton) {
+                leftButton.addEventListener('click', () => {
+                    scrollContainer.scrollBy({ left: -300, behavior: 'smooth' });
+                });
+    
+                rightButton.addEventListener('click', () => {
+                    scrollContainer.scrollBy({ left: 300, behavior: 'smooth' });
+                });
+            }
+        });
+    </script>
+    
+</head>  
+<body class=" max-h-screen ">  
+    <nav class="relative z-20 flex items-center justify-between w-full h-16 shadow-md p-4 md:p-8">
+        <div class="text-black font-bold text-3xl">
+            <a href="./main.html">Meena Plastic</a>
+        </div>
+
+        <!-- Navigation Links for Larger Screens -->
+        <ul class="hidden md:flex space-x-10">
+            <li class="cursor-pointer hover:text-green-500 text-xl font-bold">
+                <a href="./products.html">Products</a>
+            </li>
+            <li class="cursor-pointer hover:text-green-500 text-xl font-bold pl-8 pr-8">
+                <a href="./about.html">About Us</a>
+            </li>
+            <li class="cursor-pointer hover:text-green-500 text-xl font-bold">
+                <a href="./main.html">Home</a>
+            </li>
+        </ul>
+
+        <!-- Contact Us Button for Larger Screens -->
+        <button class="hidden md:block hover:text-green-500 font-bold text-xl pl-20">
+            <a href="./contact.html">Contact Us</a>
+        </button>
+
+        <!-- Hamburger Icon for Smaller Screens -->
+        <div class="md:hidden">
+            <button id="menu-icon" class="text-4xl" aria-label="Menu">&#8801;</button>
+        </div>
+
+        <!-- Mobile Navigation Links (hidden by default) -->
+        <div id="mobile-menu" class="absolute top-16 left-0 w-full bg-white p-8 space-y-4 hidden">
+            <ul>
+                <li class="cursor-pointer hover:text-green-500 text-xl font-bold pt-4">
+                    <a href="./products.html">Products</a>
+                </li>
+                <li class="cursor-pointer hover:text-green-500 text-xl font-bold pt-4">
+                    <a href="./about.html">About Us</a>
+                </li>
+                <li class="cursor-pointer hover:text-green-500 text-xl font-bold pt-4">
+                    <a href="./main.html">Home</a>
+                </li>
+                <li class="cursor-pointer hover:text-green-500 text-xl font-bold pt-4">
+                    <a href="./contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+
+
+    <main>  
+        <div class="flex justify-between my-6">  
+            <div class="bg-[url('./hero.jpg')] bg-cover bg-center h-[650px] w-full shadow-2xl shadow-slate-700 drop-shadow-2xl opacity-75">  
+                <div class="h-full w-full  bg-black bg-opacity-50 font-bold">  
+                    <div class="grid place-content-center pt-32">  
+                        <p class="md:text-6xl text-5xl font-bold text-white pt-14 w-full text-center" data-animate="slide-up">THE BEST PLASTIC PRODUCTS</p>  
+                        <p class="flex items-center justify-center text-center md:text-6xl text-5xl font-bold text-white py-20" data-animate="slide-up">IN THE WORLD</p>  
+                    </div>  
+                    
+                    <div class="grid place-content-center">  
+                        <a href="./about.html" class="bg-yellow-500 hover:bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-600 rounded-3xl p-3 text-black font-bold transition duration-300 mt-8">  
+                            Know More!  
+                        </a>  
+                    </div>  
+                </div>  
+            </div>  
+        </div>    
+
+        <!-- divider line -->
+        <div class="grid place-content-center">   
+            <div class="w-100px md:w-[600px] h-[1px]  bg-slate-800 mt-20"></div>  
+        </div>  
+
+       <!-- Services Section -->  
+<div class="my-20">
+    <h2 class="text-5xl font-bold text-center my-20 bg-gradient-to-r from-green-400 via-green-500 to-green-600 bg-clip-text text-transparent" data-animate="slide-up">Services & Solutions We Offer</h2>  
+
+    <div class="relative flex justify-center">
+        <!-- Left Scroll Button -->
+        <div class="absolute top-1/2 left-0 transform -translate-y-1/2 px-4 z-10">
+            <button id="leftButton" class="bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300">
+                &#10094;
+            </button>
+        </div>  
+
+        <!-- Scrollable Cards Container -->
+        <div id="scrollContainer" class="flex gap-10 overflow-x-auto overflow-y-hidden max-w-4xl scroll-smooth px-4">
+            <!-- Service Cards -->
+            <div class="flex-shrink-0 w-72 h-72 bg-white rounded-lg shadow-xl flex flex-col items-center justify-center hover:transform hover:translate-y-2 hover:shadow-2xl transition-all duration-300 cursor-pointer">
+                <img class="w-64 h-64 object-contain mt-4 mb-4" src="./assets/industry.png" alt="industry-icon">
+            </div>
+        
+            <div class="flex-shrink-0 w-72 h-72 bg-white rounded-lg shadow-xl flex flex-col items-center justify-center hover:transform hover:translate-y-2 hover:shadow-2xl transition-all duration-300 cursor-pointer">
+                <img class="w-64 h-64 object-contain mt-4 mb-4" src="./assets/hotel.png" alt="hotel-icon">
+            </div>
+        
+            <div class="flex-shrink-0 w-72 h-72 bg-white rounded-lg shadow-xl flex flex-col items-center justify-center hover:transform hover:translate-y-2 hover:shadow-2xl transition-all duration-300 cursor-pointer">
+                <img class="w-64 h-64 object-contain mt-4 mb-4" src="./assets/healthcare.png" alt="healthcare-icon">
+            </div>
+        
+            <div class="flex-shrink-0 w-72 h-72 bg-white rounded-lg shadow-xl flex flex-col items-center justify-center hover:transform hover:translate-y-2 hover:shadow-2xl transition-all duration-300 cursor-pointer">
+                <img class="w-64 h-64 object-contain mt-4 mb-4" src="./assets/retail.png" alt="retail-icon">
+            </div>
+        
+            <div class="flex-shrink-0 w-72 h-72 bg-white rounded-lg shadow-xl flex flex-col items-center justify-center hover:transform hover:translate-y-2 hover:shadow-2xl transition-all duration-300 cursor-pointer">
+                <img class="w-64 h-64 object-contain mt-4 mb-4" src="./assets/agriculture.png" alt="agriculture-icon">
+            </div>
+        
+            <div class="flex-shrink-0 w-72 h-72 bg-white rounded-lg shadow-xl flex flex-col items-center justify-center hover:transform hover:translate-y-2 hover:shadow-2xl transition-all duration-300 cursor-pointer">
+                <img class="w-64 h-64 object-contain mt-4 mb-4" src="./assets/food.png" alt="food-icon">
+            </div>
+        </div>
+        
+
+        <!-- Right Scroll Button -->
+        <div class="absolute top-1/2 right-0 transform -translate-y-1/2 px-4 z-10">
+            <button id="rightButton" class="bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300">
+                &#10095;
+            </button>
+        </div>  
+    </div>  
+</div>
+
+          
+
+<!-- About Us Section -->
+<section class="flex flex-col md:flex-row justify-between items-center bg-gradient-to-r from-slate-100 to-slate-50 py-16 px-8 mt-28 shadow-lg transform transition-all duration-300 ease-in-out hover:scale-105">
+    <!-- Left Content: Text -->
+    <div class="flex flex-col md:w-1/2 lg:ml-20 space-y-6">
+        <p class="text-4xl text-slate-800 font-extrabold mb-4 transform transition-all duration-500 ease-in-out hover:translate-x-4 text-left" data-animate="slide-up">About Us</p>
+        <p class="text-2xl text-slate-800 font-semibold mb-6 opacity-80 hover:opacity-100 transform transition-all duration-300 text-left" data-animate="slide-up">Discover Our Story</p>
+        <p class="text-slate-700 font-semibold leading-relaxed text-lg opacity-80 hover:opacity-100 transform transition-all duration-300 text-left" data-animate="slide-up">
+            We are Meena Plastics, a business with ISO 9001/2015 certification. We are well-known and reputable for providing the highest quality carry bags, roll garbage bags, bio-hazardous bags, and other products. Our ability to consistently outperform the competition in satisfying customer needs in a way that benefits both parties has earned us respect and trust in this business. From Vadodara, we satisfy the needs of our customers and consistently fulfill our delivery commitments.
+        </p>
+        <a href="./about.html" class="inline-block my-8 pl-6 pt-3 pb-3 text-white text-center bg-green-500 hover:bg-green-700 hover:scale-105 transform transition-all duration-300 rounded-lg shadow-lg text-lg font-semibold tracking-wide">Read More</a>
+    </div>
+
+    <!-- Right Content: Image -->
+    <div class="mt-8 md:mt-0 md:w-1/2 flex justify-center">
+        <video class="w-full  max-w-lg rounded-xl overflow-hidden fade-in" data-animate="fade-in" style="animation-delay: 0.5s;" autoplay loop muted>
+            <source src="./assets/aboutus-section.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</section>
+
+ 
+
+<section class="flex flex-col md:flex-row justify-between items-center px-4 md:px-16">
+    <!-- Text Content -->
+    <div class="flex-col w-full md:w-1/2">
+        <!-- Title -->
+        <div>
+            <p class="text-3xl md:text-4xl font-bold mt-10 md:mt-8 mb-6 md:mb-20 text-center md:text-left" data-animate="slide-up">
+                Best Plastic Substitute
+            </p>
+        </div>
+        <!-- Description -->
+        <div>
+            <p class="text-black px-4 md:px-0 md:pr-16 text-base md:text-lg text-center md:text-left" data-animate="slide-up">
+                Compostable products are the best alternative for plastics as they are ECO-NATURE-COST friendly. Provide financial benefits to society, help to control climate change, and are helpful for both land and aquatic animals.
+            </p>
+        </div>
+    </div>
+
+    <!-- Grid Content -->
+    <div class="flex justify-center w-full md:w-1/2 my-16">
+        <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4 md:gap-8 p-4 sm:p-6 md:p-10 w-full">
+            <!-- Grid Item 1 -->
+            <div class="h-[100px] sm:h-[120px] md:h-[150px] w-full rounded-2xl flex items-center justify-center shadow-md hover:shadow-lg hover:scale-105 transition duration-300 ease-in-out" data-animate="slide-up">
+                <img class="h-64 w-64 object-contain" src="./assets/Non -Toxic.png" alt="Non-Toxic">
+            </div>
+            <!-- Grid Item 2 -->
+            <div class="h-[100px] sm:h-[120px] md:h-[150px] w-full rounded-2xl flex items-center justify-center shadow-md hover:shadow-lg hover:scale-105 transition duration-300 ease-in-out" data-animate="slide-up">
+                <img class="h-64 w-64 object-contain" src="./assets/natural.png" alt="Natural">
+            </div>
+            <!-- Grid Item 3 -->
+            <div class="h-[100px] sm:h-[120px] md:h-[150px] w-full rounded-2xl flex items-center justify-center shadow-md hover:shadow-lg hover:scale-105 transition duration-300 ease-in-out" data-animate="slide-up">
+                <img class="h-64 w-64 object-contain" src="./assets/recyclable.png" alt="Recyclable">
+            </div>
+            <!-- Grid Item 4 -->
+            <div class="h-[100px] sm:h-[120px] md:h-[150px] w-full rounded-2xl flex items-center justify-center shadow-md hover:shadow-lg hover:scale-105 transition duration-300 ease-in-out" data-animate="slide-up">
+                <img class="h-64 w-64 object-contain" src="./assets/bio-based.png" alt="Bio-Based">
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+
+    <footer class="max-w-full bg-gray-900 text-white py-10 mb-10 relative overflow-hidden">  
+        <div class="container mx-auto px-6 relative z-10 grid grid-cols-1 md:grid-cols-3 gap-10">  
+            <!-- Logo Section -->  
+            <div>  
+                <h2 class="text-2xl font-bold mb-4">Meena Plastic</h2>  
+                <p class="text-sm text-gray-300 mb-6">  
+                    We are Meena Plastics, a business with ISO 9001/2015 certification. We are well-known and reputable for providing the highest quality carry bags, roll garbage bags, bio-hazardous bags, and other products.  
+                </p>  
+            
+            </div>  
+            <!-- Quick Links Section -->  
+            <div>  
+                <h2 class="text-2xl font-bold mb-4">Quick Links</h2>  
+                <ul class="space-y-4">  
+                    <li><a href="./main.html" class="hover:underline">Home</a></li>  
+                    <li><a href="./about.html" class="hover:underline">About Us</a></li>  
+                    <li><a href="./products.html" class="hover:underline">Products</a></li>  
+                    <li><a href="./contact.html" class="hover:underline">Contact Us</a></li>  
+                </ul>  
+            </div>  
+            <!-- Contact Section -->  
+            <div>  
+                <h2 class="text-2xl font-bold mb-4">Contact</h2>  
+                <p class="text-sm text-gray-300 mb-4">  
+                    <span class="font-bold">Address:</span> Meena Plastics, 882/5 Makarpura GIDC Industrial Estate, Vadodara-390010  
+                </p>  
+                <p class="text-sm text-gray-300 mb-2">  
+                    <span class="font-bold">Phone:</span> +91 94083 42280  
+                </p>  
+                <p class="text-sm text-gray-300">  
+                    <span class="font-bold">Email:</span> meenaplastics882@gmail.com 
+                </p>  
+                <p class="text-sm text-gray-300"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;yashkukreja1309@gmail.com  </p>
+            </div>      
+        </div>  
+        <!-- Bottom Footer -->  
+        <div class="border-t border-gray-700 mt-8 pt-4">   
+                <p class="text-sm text-center">&copy; 2024 Meena Plastics. All Rights Reserved.</p>   
+        </div>  
+    </footer>  
+</body>  
+</html>

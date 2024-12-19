@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garbage Bag - Product Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1.2s ease-out forwards;
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body class="max-h-screen ">
+    <nav class="relative z-20 flex items-center justify-between w-full h-16 shadow-md p-4 md:p-8">
+        <div class="text-black font-bold text-3xl">
+            <a href="./main.html">Meena Plastic</a>
+        </div>
+
+        <!-- Navigation Links for Larger Screens -->
+        <ul class="hidden md:flex space-x-10">
+            <li class="cursor-pointer hover:text-green-500 text-xl font-bold">
+                <a href="./products.html">Products</a>
+            </li>
+            <li class="cursor-pointer hover:text-green-500 text-xl font-bold pl-8 pr-8">
+                <a href="./about.html">About Us</a>
+            </li>
+            <li class="cursor-pointer hover:text-green-500 text-xl font-bold">
+                <a href="./main.html">Home</a>
+            </li>
+        </ul>
+
+        <!-- Contact Us Button for Larger Screens -->
+        <button class="hidden md:block hover:text-green-500 font-bold text-xl pl-20">
+            <a href="./contact.html">Contact Us</a>
+        </button>
+
+        <!-- Hamburger Icon for Smaller Screens -->
+        <div class="md:hidden">
+            <button id="menu-icon" class="text-4xl" aria-label="Menu">&#8801;</button>
+        </div>
+
+        <!-- Mobile Navigation Links (hidden by default) -->
+        <div id="mobile-menu" class="absolute top-16 left-0 w-full bg-white p-8 space-y-4 hidden">
+            <ul>
+                <li class="cursor-pointer hover:text-green-500 text-xl font-bold pt-4">
+                    <a href="./products.html">Products</a>
+                </li>
+                <li class="cursor-pointer hover:text-green-500 text-xl font-bold pt-4">
+                    <a href="./about.html">About Us</a>
+                </li>
+                <li class="cursor-pointer hover:text-green-500 text-xl font-bold pt-4">
+                    <a href="./main.html">Home</a>
+                </li>
+                <li class="cursor-pointer hover:text-green-500 text-xl font-bold pt-4">
+                    <a href="./contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Product Page Content -->
+    <main class=" sm:px-12">
+        <div class="bg-gray-50 py-12 px-6 sm:px-12 rounded-2xl my-10 shadow-md">
+            <!-- Section Title -->
+            <h1 class="text-4xl sm:text-5xl font-bold text-center text-gray-800 mb-8">
+                Our Products
+            </h1>
+        
+            <!-- Product Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              
+                <!-- Product Card -->
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 pt-8">
+                    <img src="./assets/garbage-bags.png" alt="Garbage Bag Image" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h2 class="text-2xl font-semibold text-gray-800 mb-2">Garbage Bag (Disposable)</h2>
+                        <p class="text-gray-600 text-sm mb-2">
+                            Superior quality garbage bags with high strength, durability, and smooth finish.
+                        </p>
+                    </div>
+                    <div class="text-center mb-8">
+                        <button class="bg-green-500 text-white px-4 py-2 rounded-md text-sm font-semibold shadow hover:bg-green-600 transition duration-300">
+                            Order Now
+                        </button>
+                        <button class="bg-blue-500 text-white px-4 py-2 rounded-md text-sm font-semibold shadow hover:bg-blue-600 transition duration-300 ml-2">
+                            Contact Us
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 pt-8">
+                    <img src="./assets/garbage-bags.png" alt="Garbage Bag Image" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h2 class="text-2xl font-semibold text-gray-800 mb-2">Garbage Bag (Disposable)</h2>
+                        <p class="text-gray-600 text-sm mb-2">
+                            Superior quality garbage bags with high strength, durability, and smooth finish.
+                        </p>
+                    </div>
+                    <div class="text-center mb-8">
+                        <button class="bg-green-500 text-white px-4 py-2 rounded-md text-sm font-semibold shadow hover:bg-green-600 transition duration-300">
+                            Order Now
+                        </button>
+                        <button class="bg-blue-500 text-white px-4 py-2 rounded-md text-sm font-semibold shadow hover:bg-blue-600 transition duration-300 ml-2">
+                            Contact Us
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 pt-8">
+                    <img src="./assets/garbage-bags.png" alt="Garbage Bag Image" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h2 class="text-2xl font-semibold text-gray-800 mb-2">Garbage Bag (Disposable)</h2>
+                        <p class="text-gray-600 text-sm mb-2">
+                            Superior quality garbage bags with high strength, durability, and smooth finish.
+                        </p>
+                    </div>
+                    <div class="text-center mb-8">
+                        <button class="bg-green-500 text-white px-4 py-2 rounded-md text-sm font-semibold shadow hover:bg-green-600 transition duration-300">
+                            Order Now
+                        </button>
+                        <button class="bg-blue-500 text-white px-4 py-2 rounded-md text-sm font-semibold shadow hover:bg-blue-600 transition duration-300 ml-2">
+                            Contact Us
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 pt-8">
+                    <img src="./assets/garbage-bags.png" alt="Garbage Bag Image" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h2 class="text-2xl font-semibold text-gray-800 mb-2">Garbage Bag (Disposable)</h2>
+                        <p class="text-gray-600 text-sm mb-2">
+                            Superior quality garbage bags with high strength, durability, and smooth finish.
+                        </p>
+                    </div>
+                    <div class="text-center mb-8">
+                        <button class="bg-green-500 text-white px-4 py-2 rounded-md text-sm font-semibold shadow hover:bg-green-600 transition duration-300">
+                            Order Now
+                        </button>
+                        <button class="bg-blue-500 text-white px-4 py-2 rounded-md text-sm font-semibold shadow hover:bg-blue-600 transition duration-300 ml-2">
+                            Contact Us
+                        </button>
+                    </div>
+                </div>
+
+               
+
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="max-w-full bg-gray-900 text-white py-10 relative overflow-hidden">  
+        <div class="container mx-auto px-6 relative z-10 grid grid-cols-1 md:grid-cols-3 gap-10">  
+            <!-- Logo Section -->  
+            <div>  
+                <h2 class="text-2xl font-bold mb-4">Meena Plastic</h2>  
+                <p class="text-sm text-gray-300 mb-6">  
+                    We are Meena Plastics, a business with ISO 9001/2015 certification. We are well-known and reputable for providing the highest quality carry bags, roll garbage bags, bio-hazardous bags, and other products.  
+                </p>  
+            
+            </div>  
+            <!-- Quick Links Section -->  
+            <div>  
+                <h2 class="text-2xl font-bold mb-4">Quick Links</h2>  
+                <ul class="space-y-4">  
+                    <li><a href="./main.html" class="hover:underline">Home</a></li>  
+                    <li><a href="./about.html" class="hover:underline">About Us</a></li>  
+                    <li><a href="./products.html" class="hover:underline">Products</a></li>  
+                    <li><a href="./contact.html" class="hover:underline">Contact Us</a></li>  
+                </ul>  
+            </div>  
+            <!-- Contact Section -->  
+            <div>  
+                <h2 class="text-2xl font-bold mb-4">Contact</h2>  
+                <p class="text-sm text-gray-300 mb-4">  
+                    <span class="font-bold">Address:</span> Meena Plastics, 882/5 Makarpura GIDC Industrial Estate, Vadodara-390010  
+                </p>  
+                <p class="text-sm text-gray-300 mb-2">  
+                    <span class="font-bold">Phone:</span> +91 94083 42280  
+                </p>  
+                <p class="text-sm text-gray-300">  
+                    <span class="font-bold">Email:</span> meenaplastics882@gmail.com 
+                </p>  
+                <p class="text-sm text-gray-300"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;yashkukreja1309@gmail.com  </p>
+            </div>      
+        </div>  
+        <!-- Bottom Footer -->  
+        <div class="border-t border-gray-700 mt-8 pt-4">   
+                <p class="text-sm text-center">&copy; 2024 Meena Plastics. All Rights Reserved.</p>   
+        </div>  
+    </footer> 
+    
+    <script>
+        // Toggle mobile menu visibility
+        document.getElementById('menu-icon').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>

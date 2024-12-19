@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Meena Plastic</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1.2s ease-out forwards;
+            opacity: 0;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const elements = document.querySelectorAll("[data-animate='fade-in']");
+
+            const menuIcon = document.getElementById('menu-icon');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (menuIcon && mobileMenu) {
+                menuIcon.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("fade-in");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            elements.forEach((el) => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</head>
+
+<body class="max-h-screen">
+    <nav class="relative z-20 flex items-center justify-between w-full h-16 shadow-md p-4 md:p-8">
+        <div class="text-black font-bold text-3xl">
+            <a href="./main.html">Meena Plastic</a>
+        </div>
+
+        <!-- Navigation Links for Larger Screens -->
+        <ul class="hidden md:flex space-x-10">
+            <li class="cursor-pointer hover:text-green-500 text-xl font-bold">
+                <a href="./products.html">Products</a>
+            </li>
+            <li class="cursor-pointer hover:text-green-500 text-xl font-bold pl-8 pr-8">
+                <a href="./about.html">About Us</a>
+            </li>
+            <li class="cursor-pointer hover:text-green-500 text-xl font-bold">
+                <a href="./main.html">Home</a>
+            </li>
+        </ul>
+
+        <!-- Contact Us Button for Larger Screens -->
+        <button class="hidden md:block hover:text-green-500 font-bold text-xl pl-20">
+            <a href="./contact.html">Contact Us</a>
+        </button>
+
+        <!-- Hamburger Icon for Smaller Screens -->
+        <div class="md:hidden">
+            <button id="menu-icon" class="text-4xl" aria-label="Menu">&#8801;</button>
+        </div>
+
+        <!-- Mobile Navigation Links (hidden by default) -->
+        <div id="mobile-menu" class="absolute top-16 left-0 w-full bg-white p-8 space-y-4 hidden">
+            <ul>
+                <li class="cursor-pointer hover:text-green-500 text-xl font-bold pt-4">
+                    <a href="./products.html">Products</a>
+                </li>
+                <li class="cursor-pointer hover:text-green-500 text-xl font-bold pt-4">
+                    <a href="./about.html">About Us</a>
+                </li>
+                <li class="cursor-pointer hover:text-green-500 text-xl font-bold pt-4">
+                    <a href="./main.html">Home</a>
+                </li>
+                <li class="cursor-pointer hover:text-green-500 text-xl font-bold pt-4">
+                    <a href="./contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation Links -->
+        <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-white p-8 space-y-4 hidden shadow-lg z-50 transition-transform transform translate-x-full">
+            <ul class="flex flex-col space-y-4">
+            <li class="cursor-pointer hover:text-green-500 text-xl font-bold">
+                <a href="./products.html">Products</a>
+            </li>
+            <li class="cursor-pointer hover:text-green-500 text-xl font-bold">
+                <a href="./about.html">About Us</a>
+            </li>
+            <li class="cursor-pointer hover:text-green-500 text-xl font-bold">
+                <a href="./main.html">Home</a>
+            </li>
+            <li class="cursor-pointer hover:text-green-500 text-xl font-bold">
+                <a href="./contact.html">Contact Us</a>
+            </li>
+            </ul>
+        </div>
+
+
+    <!-- About Us Section -->
+    <main class="py-10 px-6 sm:px-12">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold fade-in mt-14" data-animate="fade-in">About Meena Plastic</h1>
+            <p class="text-lg text-gray-600 mt-4 mb-14 fade-in" data-animate="fade-in" style="animation-delay: 0.3s;">Delivering quality plastic products for various industries with a commitment to sustainability and customer satisfaction.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-gradient-to-r from-slate-100 to-slate-200 rounded-2xl p-10">
+            <!-- Left Section -->
+            <div class="fade-in" data-animate="fade-in">
+                <h2 class="text-3xl font-bold mb-4">Our Journey</h2>
+                <p class="text-gray-700 mb-6">Since our inception, Meena Plastics has been dedicated to offering top-quality products like carry bags, garbage bags, and bio-hazardous bags. We pride ourselves on adhering to ISO 9001/2015 standards and delivering innovative solutions tailored to our customers' needs.</p>
+                <h2 class="text-3xl font-bold mb-4 mt-20">Why Choose Us ?</h2>
+                <ul class="list-disc pl-5 text-gray-700">
+                    <li>ISO 9001/2015 certified quality standards</li>
+                    <li>Environmentally friendly and sustainable practices</li>
+                    <li>Reliable and timely deliveries</li>
+                    <li>Wide range of customizable plastic products</li>
+                </ul>
+            </div>
+
+            <!-- Right Section -->
+            <div class="flex justify-center">
+                <video class="w-full  max-w-lg rounded-xl overflow-hidden fade-in" data-animate="fade-in" style="animation-delay: 0.5s;" autoplay loop muted>
+                    <source src="./assets/tic (1).mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <!-- Core Values Section -->
+        <section class="mt-16">
+            <h2 class="text-3xl font-bold text-center mb-10 fade-in" data-animate="fade-in">Our Core Values</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <!-- Value Card -->
+                <div class="p-6 bg-white shadow-lg rounded-lg fade-in" data-animate="fade-in">
+                    <h3 class="text-xl font-bold mb-4">Innovation</h3>
+                    <p class="text-gray-600">We strive to innovate and provide cutting-edge solutions in the plastics industry.</p>
+                </div>
+
+                <!-- Value Card -->
+                <div class="p-6 bg-white shadow-lg rounded-lg fade-in" data-animate="fade-in" style="animation-delay: 0.3s;">
+                    <h3 class="text-xl font-bold mb-4">Quality</h3>
+                    <p class="text-gray-600">Our products are crafted with precision to ensure the highest quality standards.</p>
+                </div>
+
+                <!-- Value Card -->
+                <div class="p-6 bg-white shadow-lg rounded-lg fade-in" data-animate="fade-in" style="animation-delay: 0.6s;">
+                    <h3 class="text-xl font-bold mb-4">Sustainability</h3>
+                    <p class="text-gray-600">We are committed to sustainable practices for a better tomorrow.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="mt-16">
+            <h2 class="text-3xl font-bold text-center mb-10 fade-in" data-animate="fade-in">Our Services</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <div class="p-6 bg-white shadow-lg rounded-lg fade-in" data-animate="fade-in">
+                    <h3 class="text-xl font-bold mb-4">Custom Plastic Solutions</h3>
+                    <p class="text-gray-600">We offer tailor-made plastic products for businesses of all sizes, ensuring the perfect fit for your needs.</p>
+                </div>
+                <div class="p-6 bg-white shadow-lg rounded-lg fade-in" data-animate="fade-in" style="animation-delay: 0.3s;">
+                    <h3 class="text-xl font-bold mb-4">Packaging Solutions</h3>
+                    <p class="text-gray-600">Our high-quality plastic packaging ensures durability, safety, and cost-efficiency for your products.</p>
+                </div>
+                <div class="p-6 bg-white shadow-lg rounded-lg fade-in" data-animate="fade-in" style="animation-delay: 0.6s;">
+                    <h3 class="text-xl font-bold mb-4">Waste Management</h3>
+                    <p class="text-gray-600">We produce waste bags that meet industry standards for safe disposal and waste management.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="max-w-full bg-gray-900 text-white py-10 mb-10 relative overflow-hidden">  
+        <div class="container mx-auto px-6 relative z-10 grid grid-cols-1 md:grid-cols-3 gap-10">  
+            <!-- Logo Section -->  
+            <div>  
+                <h2 class="text-2xl font-bold mb-4">Meena Plastic</h2>  
+                <p class="text-sm text-gray-300 mb-6">  
+                    We are Meena Plastics, a business with ISO 9001/2015 certification. We are well-known and reputable for providing the highest quality carry bags, roll garbage bags, bio-hazardous bags, and other products.  
+                </p>  
+            
+            </div>  
+            <!-- Quick Links Section -->  
+            <div>  
+                <h2 class="text-2xl font-bold mb-4">Quick Links</h2>  
+                <ul class="space-y-4">  
+                    <li><a href="./main.html" class="hover:underline">Home</a></li>  
+                    <li><a href="./about.html" class="hover:underline">About Us</a></li>  
+                    <li><a href="./products.html" class="hover:underline">Products</a></li>  
+                    <li><a href="./contact.html" class="hover:underline">Contact Us</a></li>  
+                </ul>  
+            </div>  
+            <!-- Contact Section -->  
+            <div>  
+                <h2 class="text-2xl font-bold mb-4">Contact</h2>  
+                <p class="text-sm text-gray-300 mb-4">  
+                    <span class="font-bold">Address:</span> Meena Plastics, 882/5 Makarpura GIDC Industrial Estate, Vadodara-390010  
+                </p>  
+                <p class="text-sm text-gray-300 mb-2">  
+                    <span class="font-bold">Phone:</span> +91 94083 42280  
+                </p>  
+                <p class="text-sm text-gray-300">  
+                    <span class="font-bold">Email:</span> meenaplastics882@gmail.com 
+                </p>  
+                <p class="text-sm text-gray-300"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;yashkukreja1309@gmail.com  </p>
+            </div>      
+        </div>  
+        <!-- Bottom Footer -->  
+        <div class="border-t border-gray-700 mt-8 pt-4">   
+                <p class="text-sm text-center">&copy; 2024 Meena Plastics. All Rights Reserved.</p>   
+        </div>  
+    </footer> 
+</body>
+
+</html> 
